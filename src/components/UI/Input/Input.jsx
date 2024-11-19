@@ -1,13 +1,14 @@
+import React from 'react'
 import styles from './style.module.scss'
 
-const Input = ({ label, label_id, setting }) => {
+const Input = React.forwardRef(({ label, label_id, setting }, ref) => {
 	return (
 		<div className={styles.input}>
 			<label htmlFor={label_id}>{label}</label>
 
-			<input {...setting} />
+			<input ref={ref} {...setting} />
 		</div>
 	)
-}
+})
 
 export default Input

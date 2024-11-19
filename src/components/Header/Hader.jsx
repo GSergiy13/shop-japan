@@ -1,12 +1,12 @@
 import HeaderCartButton from './HeaderCartButton/HeaderCartButton'
 import styles from './styles.module.scss'
 
-const Header = () => {
+const Header = ({ showModalHandler }) => {
 	return (
 		<header className={styles.header}>
 			<h1>Logo</h1>
 
-			<HeaderCartButton />
+			<HeaderCartButton showModalHandler={showModalHandler} />
 		</header>
 	)
 }
